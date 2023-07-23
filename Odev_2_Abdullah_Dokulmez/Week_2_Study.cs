@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Week_2_Study : MonoBehaviour
 {
-    void bolenleriBul(int ilksayi, int ikincisayi)
-        {
-        int[] girilenSayilar = { ilksayi, ikincisayi }; // Veri boyutu sabit ve deðiþmeyecek. Ýnteger dizi kullanýmý performans kriteri olarak önemlidir.
+    void bolenleriBul(int first_val, int second_val)
+    {
+        int[] takenValues = { first_val, second_val }; // Veri boyutu sabit ve deðiþmeyecek. Ýnteger dizi kullanýmý performans kriteri olarak önemlidir.
 
         List<int> main_list= new List<int>();       //Veri boyutu deðiþecek ancak türü sabit kalacak o nednele "array list" yerine list tercih edildi.
         List<int> divisible_by_2 = new List<int>();
@@ -15,9 +15,9 @@ public class Week_2_Study : MonoBehaviour
         List<int> divisible_by_4 = new List<int>();
         List<int> divisible_by_5 = new List<int>();
 
-        Array.Sort(girilenSayilar); // Koþullar ile sayýlardan büyük olaný seçilmektense alýnan iki sayýyý küçükten büyüðe sýraladýk.
+        Array.Sort(takenValues); // Koþullar ile sayýlardan büyük olaný seçilmektense alýnan iki sayýyý küçükten büyüðe sýraladýk.
         
-        for (int i = girilenSayilar[0]; i <= girilenSayilar[1]; i++) //Her bir sayý bölünebilirliklerine göre listelere sýralandý.
+        for (int i = takenValues[0]; i <= takenValues[1]; i++) //Her bir sayý bölünebilirliklerine göre listelere sýralandý.
         {
             main_list.Add(i);
             if (i % 2 == 0) divisible_by_2.Add(i);
